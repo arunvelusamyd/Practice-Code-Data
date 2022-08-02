@@ -32,10 +32,19 @@ public class SortingService {
         System.out.println();
 
         //Quick Sort
-        int[] dataToSortByQuickSort = {16,4,9,49,36,25,64,1};
+        int[] dataToSortByQuickSort = {1,4,16,9,36,25,64,49};
         QuickSort quickSort = new QuickSort();
-        quickSort.doQuickSort(dataToSortByQuickSort,3, 7);
+        quickSort.doQuickSort(dataToSortByQuickSort,0, 7);
         for(int datum:dataToSortByQuickSort) {
+            System.out.print(datum+" ");
+        }
+        System.out.println();
+
+        //Merge Sort
+        int[] dataToSortByMergeSort = {5,2,17,10,26,50,37,65,};
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.doMergeSort(dataToSortByMergeSort);
+        for(int datum:dataToSortByMergeSort) {
             System.out.print(datum+" ");
         }
         System.out.println();
