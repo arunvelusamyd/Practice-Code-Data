@@ -49,6 +49,16 @@ public class SortingService {
         }
         System.out.println();
 
+        //Heap Sort
+        int[] dataToSortByHeapSort = {5,2,17,10,26,50,37,65,};
+        HeapSort heapSort = new HeapSort();
+        heapSort.doHeapSort(dataToSortByHeapSort);
+        System.out.println("Heap Sort Result : ");
+        for(int datum:dataToSortByHeapSort) {
+            System.out.print(datum+" ");
+        }
+        System.out.println();
+
 
     }
 }
