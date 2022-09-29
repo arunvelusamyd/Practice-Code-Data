@@ -41,7 +41,7 @@ public class SortingService {
         System.out.println();
 
         //Merge Sort
-        int[] dataToSortByMergeSort = {5,2,17,10,26,50,37,65,};
+        int[] dataToSortByMergeSort = {5,2,17,10,26,50,37,65};
         MergeSort mergeSort = new MergeSort();
         mergeSort.doMergeSort(dataToSortByMergeSort);
         for(int datum:dataToSortByMergeSort) {
@@ -50,7 +50,7 @@ public class SortingService {
         System.out.println();
 
         //Heap Sort
-        int[] dataToSortByHeapSort = {5,2,17,10,26,50,37,65,};
+        int[] dataToSortByHeapSort = {5,2,17,10,26,50,37,65};
         HeapSort heapSort = new HeapSort();
         heapSort.doHeapSort(dataToSortByHeapSort);
         System.out.println("Heap Sort Result : ");
@@ -59,6 +59,15 @@ public class SortingService {
         }
         System.out.println();
 
+        //Shell Sort
+        int[] dataToSortByShellSort = {15,4,7,1,16,20,37,15,13};
+        ShellSort shellSort = new ShellSort();
+        shellSort.doShellSort(dataToSortByShellSort);
+        System.out.println("Shell Sort Result : ");
+        for(int datum:dataToSortByShellSort) {
+            System.out.print(datum+" ");
+        }
+        System.out.println();
 
     }
 }

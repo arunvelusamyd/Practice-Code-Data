@@ -14,7 +14,7 @@ public class HeapSort {
     }
 
     public void heapify(int a[], int indexToHeapify, int arrayLength) {
-        int maxChildPosition, maxChildValue, childIndexToHeapify;
+        int maxChildPosition;
         if(2*indexToHeapify <= arrayLength) {
             if((2*indexToHeapify)+1 <= arrayLength) {
                 //Node is full BT. Have 2 children
