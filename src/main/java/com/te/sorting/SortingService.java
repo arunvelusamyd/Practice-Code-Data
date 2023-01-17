@@ -77,12 +77,18 @@ public class SortingService {
         System.out.println();
 
         //Counting Sort
-        int[] arr = {10,2,4,6,9,8,12};
+        int[] dataToSortBycountingSort = {10,2,4,6,9,8,12};
         CountingSort countingSort = new CountingSort();
-        int[] output = countingSort.doCountingSort(arr);
+        int[] output = countingSort.doCountingSort(dataToSortBycountingSort);
         System.out.println("Counting Sort Result : ");
         Arrays.stream(output).forEach(val -> System.out.print(val+" "));
         System.out.println();
+
+        int[] dataToSortByRadixSort = {194, 25, 13, 18, 12, 58, 73, 39, 36, 143, 183, 121, 124};
+        RadixSort radixSort = new RadixSort();
+        int[] radixSortedoutput = radixSort.doRadixSort(dataToSortByRadixSort);
+        System.out.println("Radix Sort Result : ");
+        Arrays.stream(radixSortedoutput).forEach(val -> System.out.print(val+" "));
 
     }
 }
