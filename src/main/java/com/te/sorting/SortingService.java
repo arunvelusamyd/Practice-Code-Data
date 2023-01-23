@@ -102,5 +102,13 @@ public class SortingService {
         Arrays.stream(bucketSortedArr).forEach(val -> System.out.print(val+" "));
         System.out.println();
 
+        //Tree sort
+        int[] arr = {34, 57, 48, 39, 63, 51, 27, 55, 61, 53};
+        TreeSort treeSort = new TreeSort();
+        int[] treeSortedArr =  treeSort.doTreeSort(arr);
+        System.out.println("Tree Sort Result : ");
+        Arrays.stream(treeSortedArr).forEach(val -> System.out.print(val+" "));
+        System.out.println();
+
     }
 }

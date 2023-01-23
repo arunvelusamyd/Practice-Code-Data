@@ -13,7 +13,7 @@ public class RadixSort {
         return arr;
     }
 
-    public int[] doCountSort(int[] arr, int d) {
+    private int[] doCountSort(int[] arr, int d) {
         int[] count = new int[10];
         int[] output = new int[arr.length];
         for(int i=0; i<arr.length;i++) {
@@ -30,20 +30,13 @@ public class RadixSort {
         return arr;
     }
 
-    public int findMax(int[] a) {
+    private int findMax(int[] a) {
         int max = a[0];
         for(int i=1;i<a.length;i++) {
             if(a[i] > max)
                 max = a[i];
         }
         return max;
-    }
-
-    public static void main(String args[]) {
-
-
-
-        System.out.println();
     }
 
 }

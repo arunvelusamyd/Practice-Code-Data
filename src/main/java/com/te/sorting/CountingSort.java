@@ -21,7 +21,7 @@ public class CountingSort {
         return output;
     }
 
-    public int findMax(int[] a) {
+    private int findMax(int[] a) {
         int max = a[0];
         for(int i=1;i<a.length;i++) {
             if(a[i] > max)

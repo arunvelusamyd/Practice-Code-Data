@@ -13,7 +13,7 @@ public class HeapSort {
         }
     }
 
-    public void heapify(int a[], int indexToHeapify, int arrayLength) {
+    private void heapify(int a[], int indexToHeapify, int arrayLength) {
         int maxChildPosition;
         if(2*indexToHeapify <= arrayLength) {
             if((2*indexToHeapify)+1 <= arrayLength) {

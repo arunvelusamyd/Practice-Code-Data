@@ -21,7 +21,7 @@ public class BucketSort {
         return mergeBuckets(buckets, size);
     }
 
-    public int[] mergeBuckets(List<Integer>[] buckets,int size) {
+    private int[] mergeBuckets(List<Integer>[] buckets,int size) {
         int[] output = new int[size];
         int idx = 0;
         for(List<Integer> bucket:buckets) {
@@ -51,13 +51,13 @@ public class BucketSort {
         array[secondPosition] = temp;
     }
 
-    public int hash(int val, int min, int max, int numberOfBuckets) {
+    private int hash(int val, int min, int max, int numberOfBuckets) {
         int range = ((max-min)/numberOfBuckets)+1;
         int hashVal = (val-min)/range;
         return hashVal;
     }
 
-    public int[] findMinAndMax(int[] a) {
+    private int[] findMinAndMax(int[] a) {
         int[] minAndMax = new int[2];
         minAndMax[0] = a[0];
         minAndMax[1] = a[0];
