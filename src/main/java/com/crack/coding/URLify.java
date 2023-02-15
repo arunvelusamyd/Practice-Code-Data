@@ -8,7 +8,7 @@ public class URLify {
         System.out.println();
     }
 
-    public void replaceSpaces(char[] str, int trueLength) {
+    private void replaceSpaces(char[] str, int trueLength) {
         int spaceCount = 0, index;
         for(int i =0; i<trueLength;i++) {
             if(str[i] == ' ') {
