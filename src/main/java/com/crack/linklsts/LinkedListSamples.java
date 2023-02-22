@@ -69,8 +69,27 @@ public class LinkedListSamples {
             rootNode_3.appendToTrail(arr_5[i]);
         }
         System.out.println(rootNode_3);
-        Node partitionedList = linkedListSamples.partitionTheList(rootNode_3, 5);
-        System.out.println(partitionedList);
+        System.out.println("Patition Value: "+ 5);
+        System.out.println(linkedListSamples.partitionTheList(rootNode_3, 5));
+
+        int[] arr_6 = {3, 5, 8, 5, 10, 2, 1};
+        Node rootNode_4 = new Node(arr_6[0]);
+        for(int i=1;i<arr_6.length;i++) {
+            rootNode_4.appendToTrail(arr_6[i]);
+        }
+        System.out.println(rootNode_4);
+        System.out.println("Patition Value: "+ 8);
+        System.out.println(linkedListSamples.partitionTheList(rootNode_4, 8));
+
+        int[] arr_7 = {3, 5, 8, 5, 10, 2, 1};
+        Node rootNode_5 = new Node(arr_7[0]);
+        for(int i=1;i<arr_7.length;i++) {
+            rootNode_5.appendToTrail(arr_7[i]);
+        }
+        System.out.println(rootNode_5);
+        System.out.println("Patition Value: "+ 2);
+        System.out.println(linkedListSamples.partitionTheList(rootNode_5, 2));
+
         System.out.println();
     }
 

@@ -49,6 +49,16 @@ public class Node {
         return;
     }
 
+    public int getLength() {
+        int length = 0;
+        Node node = this;
+        while(node!=null) {
+            length++;
+            node = node.next;
+        }
+        return length;
+    }
+
     @Override
     public String toString() {
         String printString = "|"+this.data+"|";
