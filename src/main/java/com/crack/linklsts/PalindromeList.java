@@ -17,16 +17,34 @@ public class PalindromeList {
         System.out.println();
 
         PalindromeList palindromeList = new PalindromeList();
-        System.out.println("is ["+rootNode+"] a  palindrome? "+palindromeList.isPalindrome(rootNode));
+        System.out.println("is ["+rootNode+"] a  palindrome? "+palindromeList.isPalindrome_1(rootNode));
+        System.out.println("is ["+rootNode+"] a  palindrome? "+palindromeList.isPalindrome_2(rootNode,rootNode.getLength()).result);
     }
 
-    private boolean isPalindrome(Node node) {
+    private class ResultNode {
+        Node linkedListNode;
+        boolean result;
+        public ResultNode(Node linkedListNode, boolean result) {
+            this.linkedListNode = linkedListNode;
+            this.result = result;
+        }
+    }
 
+    private ResultNode isPalindrome_2(Node head, int length) {
+        if(head == null || length <= 0)
+            return new ResultNode(head, true);
+        else if(length == 1)
+            return new ResultNode(head.next, true);
+        ResultNode res = isPalindrome_2(head.next, length-2);
+        if(!res.result||res.linkedListNode==null)
+            return res;
+        res.result = (head.data==res.linkedListNode.data);
+        res.linkedListNode = res.linkedListNode.next;
+        return res;
+    }
+
+    private boolean isPalindrome_1(Node node) {
         Node reverse = cloneAndReverse(node);
-
-        System.out.println(node);
-        System.out.println(reverse);
-
         while(node != null) {
             if(node.data != reverse.data)
                 return false;
