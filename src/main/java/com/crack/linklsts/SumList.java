@@ -22,7 +22,6 @@ public class SumList {
         }
         System.out.println(rootNode_2.toString());
         System.out.println();
-
         //Sum digits in reverse order
         SumList sumList = new SumList();
         Node sum= sumList.sumDigitsInReverseOrder(rootNode_1, rootNode_2, 0);
