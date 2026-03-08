@@ -5,6 +5,7 @@ import java.util.*;
 public class CollectionsSample {
 
     public static void main(String args[]){
+
         List<String> immutableList = List.of("Tampines","Bedok", "Simei");
         Set<String> immutableSet = Set.of("Singapore","Malaysia","Indonesia");
         Map<String,String> immutableMap = Map.of("SG","Singapore","MY","Malaysia","ID","Indoesnia");
@@ -31,6 +32,8 @@ public class CollectionsSample {
             e.printStackTrace();
         }*/
 
+        //ArrayList: Best for read-heavy applications with frequent random access or adding elements to the end.
+        //LinkedList: Best for write-heavy applications requiring frequent insertions/deletions at the beginning or middle, or for building stacks/queues.
         List<String> list1 = new ArrayList<>();
         list1.add("Tampines");
         list1.add("Bedok");
